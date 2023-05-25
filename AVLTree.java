@@ -4,11 +4,11 @@ public class AVLTree {
 
     private Node root;
 
-    // public long counter;
+    public long counter;
 
-    /* public AVLTree() {
+    public AVLTree() {
         counter = 0;
-    } */
+    }
 
     private static class Node {
         int value;
@@ -77,7 +77,7 @@ public class AVLTree {
     }
 
     private Node insert(Node node, int value) {
-        //counter++;
+        counter++;
         if (node == null) {
             root = new Node(value);
             return root;
@@ -95,7 +95,7 @@ public class AVLTree {
     }
 
     private Node delete(Node node, int value) {
-        //counter++;
+        counter++;
         if (node == null) {
             return null;
         } else if (node.value > value) {
@@ -138,7 +138,7 @@ public class AVLTree {
         return mostLeftChild(node.left);
     }
 
-    /* public long getIterations() {
+    public long getIterations() {
         long save = counter;
         counter = 0;
         return save;
@@ -178,5 +178,5 @@ public class AVLTree {
             data[i][1] = endTime - startTime;
         }
         return data;
-    } */
+    }
 }
